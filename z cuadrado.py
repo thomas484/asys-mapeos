@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib
 import numpy as np
 
 # Creamos un arreglo de números complejos z
@@ -10,10 +10,10 @@ z = x[:,None] + y[None,:]*1j
 w = z**2
 
 # Graficamos los resultados
-plt.figure(figsize=(8,6))
-plt.imshow(np.angle(w), cmap='hsv', extent=[-2,2,-2,2])
-plt.title('Mapeo complejo w = z^2')
-plt.xlabel('Parte real de z')
-plt.ylabel('Parte imaginaria de z')
-plt.colorbar()
-plt.show()
+matplotlib.figure(figsize=(8,6))
+matplotlib.imshow(np.angle(w), cmap='hsv', extent=[-2,2,-2,2])
+matplotlib.title('Mapeo complejo w = z^2')
+matplotlib.xlabel('Parte real de z')
+matplotlib.ylabel('Parte imaginaria de z')
+matplotlib.colorbar()
+matplotlib.show()
